@@ -5,6 +5,7 @@ I have a pool of friends who keep visiting around the globe all around the year!
 
 Fiddle is a web based app to pin their visited locations and share their memorable experiences at one place. It is a work in progress application, and many more features have been thought to introduce into this app.
 
+![alt text](https://github.com/ashish-chopra/fiddle/blob/master/src/main/webapp/images/screenshot)
 
 
 Current Release
