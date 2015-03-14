@@ -1,21 +1,21 @@
 package action;
 
-import javax.servlet.http.HttpSession;
-
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import org.apache.log4j.Logger;
+import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessages;
 
 import constants.Constants;
-import controller.MarkersController;
+import contentModel.MarkersCM;
+import data.DBManager;
 import form.MarkersActionForm;
 
-public class MarkersAction extends StrutsAction
+public class MarkersAction extends Action
 {
 	private static Logger logger = Logger.getLogger(MarkersAction.class);
 	
@@ -41,11 +41,14 @@ public class MarkersAction extends StrutsAction
 					JSONObject json = new JSONObject();
 					JSONArray jsonArray = null;
 					
-					MarkersController markersController= new MarkersController();
+					DBManager db = DBManager.init();
 					
 					try
 					{
-						jsonArray = JSONArray.fromObject(markersController.getAllMarkersData());
+						
+						db.doConnect();
+						MarkersCM markerCM = new MarkersCM(db);
+						jsonArray = JSONArray.fromObject(markerCM.getAllMarkersData());
 						
 						json.put("status", "success");
 						json.put("data", jsonArray);
@@ -56,11 +59,20 @@ public class MarkersAction extends StrutsAction
 						e.printStackTrace();
 						
 					}
+					finally {
+						try{
+							db.doDisconnect();
+							}
+							catch(Exception e)
+							{
+								e.printStackTrace();
+							}
+					}
 					forward = null;
 					response.getWriter().println(json);
 				}
 				
-				return executeAtEnd(mapping, form, request, response, mapping.findForward(forward));
+				return mapping.findForward(forward);
 			}
 
 }
