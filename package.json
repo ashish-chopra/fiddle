@@ -2,6 +2,7 @@
     "name": "fiddle",
     "version": "3.0.0",
     "description": "A funny app to pin your visited locations around the globe.",
+    "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },

@@ -139,9 +139,7 @@ gulp.task('js', function () {
 
 //process vendor scripts and styles
 gulp.task('vendor', function () {
-    return gulp.src(mbf(), {
-            base: path.bower
-        })
+    return gulp.src(mbf({debugging: true}), {base: path.bower})
         .pipe(gulp.dest(path.vendor));
 });
 
