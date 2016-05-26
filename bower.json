@@ -1,0 +1,31 @@
+{
+    "name": "fiddle",
+    "description": "A funny app to pin your visited locations around the globe.",
+    "main": "index.js",
+    "authors": [
+    "Ashish Chopra"
+  ],
+    "license": "ISC",
+    "homepage": "https://github.com/ashish-chopra/fiddle",
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "devDependencies": {
+        "bootstrap": "^3.3.6",
+        "angular": "^1.5.5",
+        "angular-ui-router": "^0.3.0"
+    },
+    "overrides": {
+        "bootstrap": {
+            "main": [
+        "./dist/js/bootstrap.js",
+        "./dist/css/bootstrap.css",
+        "./dist/fonts/*"
+      ]
+        }
+    }
+}

@@ -10,7 +10,7 @@ Fiddle is a web based app to pin their visited locations and share their memorab
 
 Current Release
 ===================
-`master` branch is the currently active development branch of the code base. When a stable version is released, it is released in its own branch.
+`master` branch is the currently active development branch of the code base. When a stable version is released, it is released in its own branch. I have decided to re-write the whole app in newest and fresh technology for my own sake. It is currently in development (Angular JS, Firebase, bootstrap etc)
 
 Releases Information is found below:
 

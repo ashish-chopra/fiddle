@@ -1,0 +1,30 @@
+{
+    "name": "fiddle",
+    "version": "3.0.0",
+    "description": "A funny app to pin your visited locations around the globe.",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ashish-chopra/fiddle.git"
+    },
+    "author": "Ashish Chopra",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ashish-chopra/fiddle/issues"
+    },
+    "homepage": "https://github.com/ashish-chopra/fiddle#readme",
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-clean": "^0.3.2",
+        "gulp-concat": "^2.6.0",
+        "gulp-connect": "^3.2.2",
+        "gulp-sass": "^2.3.1",
+        "gulp-sourcemaps": "^1.6.0",
+        "main-bower-files": "^2.11.1",
+        "run-sequence": "^1.2.0",
+        "vinyl-source-stream": "^1.1.0"
+    }
+}
