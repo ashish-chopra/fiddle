@@ -1,12 +1,13 @@
- /* Global level variables */
-$font-size:16px;
-$text-color: #fff;
-$accent-color: darkturquoise;
-$secondary-color: #fff;
+ /* Global CONSTANTS */
+
+$font-size:12px;
+$text-color: #424242;
+$accent-color: #CD5C5C;
 $hero-size: 45px;
+$card-color: white;
 
 
-/* Global Styles */
+/* styles */
 
 *,
 *:after,
@@ -17,9 +18,16 @@ $hero-size: 45px;
 }
 
 html,body {
-    margin:0;
-    padding:0;
     width: 100%;
     height: 100%;
+    //font-family: "Open Sans" sans-serif;
+    font-size: $font-size;
     color: $text-color;
+}
+
+.icon-theme {
+    color: $accent-color;
+}
+.icon-theme-inverse {
+    color: white;
 }
